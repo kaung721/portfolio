@@ -11,7 +11,7 @@ const Projects = () => {
       title: "Clothing Store Website",
       category: "Frontend",
       type: "Web Application",
-      image: "/api/placeholder/600/400",
+      image: "/image1.png",
       github: "https://github.com/kaung721/projects/tree/main/clothing%20store",
       live: "https://project1-lzp.pages.dev/",
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Candy Store Website",
       category: "Frontend",
       type: "Web Application",
-      image: "/api/placeholder/600/400",
+      image: "/image2.png",
       github: "https://github.com/kaung721/projects/tree/main/css%20project",
       live: "https://project2-aqp.pages.dev/",
     }
@@ -41,9 +41,7 @@ const Projects = () => {
             {projects.map((project) => (
               <div key={project.id} className="project-card">
                 <div className="project-image">
-                  <div className="image-placeholder">
-                    <FaCode />
-                  </div>
+                  <img src={project.image} alt={project.title} className="project-img" />
                   <div className="project-overlay">
                     <div className="project-links">
                       {project.github && (
